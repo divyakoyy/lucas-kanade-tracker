@@ -27,5 +27,11 @@ function [pos, lambda] = goodFeatures(I, sigma, lambdaThresh, nMax, minDist, mar
     pos(2,:) = C;
     
     lambda = lam(finalIndices);
-     
+    imagesc(I);
+    hold on;
+    [r,c] = size(pos);
+     for i= 1:c
+       plot(pos(2,i), pos(1,i),'o','MarkerSize', 7, 'MarkerFaceColor', 'g', 'MarkerEdgeColor', 'b');
+       
+     end
 end
